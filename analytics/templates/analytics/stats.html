@@ -1,0 +1,9 @@
+<h2>Статистика сайта</h2>
+<p>Посещений страницы: <strong>{{ page_visits }}</strong></p>
+<p>Зарегистрированных пользователей: <strong>{{ user_count }}</strong></p>
+<p>Просмотров товара #1: <strong>{{ product_views }}</strong></p>
+
+<form action="{% url 'reset_stats' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Сбросить статистику</button>
+</form>
